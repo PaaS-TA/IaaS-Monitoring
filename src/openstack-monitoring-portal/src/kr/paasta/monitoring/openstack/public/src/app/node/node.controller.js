@@ -94,7 +94,7 @@
       );
     })();
 
-    vm.messageQueueHost = 'http://xxx.xxx.xxx.xxx:xxxxx';
+    vm.messageQueueHost = 'http://115.68.151.175:15672';
     vm.goMessageQueue = function(uri) {
       var messageQueueUrl = vm.messageQueueHost + '/#/' + uri;
       $window.open(messageQueueUrl, 'messageQueue');
