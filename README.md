@@ -43,27 +43,28 @@ IaaS-Monitoring-v1.0
         * [Front-end 환경설정 (Ubuntu)](#24)
             * [npm Install](#25)
             * [bower Install](#26)
-            * [Building 및 Web Server 기동](#27)
+            * [Source Update](#27)
+            * [Building 및 Web Server 기동](#28)
             
-3. [3.	IaaS 모니터링 애플리케이션 구성](#28)
-    * [관련 Table 목록](#29)
-    * [IaaS-Monitoring 구조](#30)
-    * [IaaS-Monitoring Component](#31)
-    * [IaaS-Monitoring 설정정보](#32)
-    * [IaaS-Monitoring Package 구조](#33)
-    * [IaaS-Monitoring Package간 호출 구조](#34)
-    * [IaaS-Monitoring 화면](#35)
-        * [Login 화면](#36)
-        * [Main 화면](#37)
-        * [Manage Node Summary 화면](#38)
-        * [Manage Node 상세화면](#39)
-        * [Compute Node Summary](#40)
-        * [Tenant Summary](#41)
-        * [VM 상세 화면](#42)
-        * [Alram Notification](#43)
-        * [Alram Definition](#44)
-        * [Alram Definition 생성](#45)
-        * [Alram Status 조회](#46)
+3. [3.	IaaS 모니터링 애플리케이션 구성](#29)
+    * [관련 Table 목록](#30)
+    * [IaaS-Monitoring 구조](#31)
+    * [IaaS-Monitoring Component](#32)
+    * [IaaS-Monitoring 설정정보](#33)
+    * [IaaS-Monitoring Package 구조](#34)
+    * [IaaS-Monitoring Package간 호출 구조](#35)
+    * [IaaS-Monitoring 화면](#36)
+        * [Login 화면](#37)
+        * [Main 화면](#38)
+        * [Manage Node Summary 화면](#39)
+        * [Manage Node 상세화면](#40)
+        * [Compute Node Summary](#41)
+        * [Tenant Summary](#42)
+        * [VM 상세 화면](#43)
+        * [Alram Notification](#44)
+        * [Alram Definition](#45)
+        * [Alram Definition 생성](#46)
+        * [Alram Status 조회](#47)
         
 <br /><br /><br /><br />
 
@@ -520,7 +521,15 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-##### 2.4.4.3. Building 및 Web Server 기동 <div id='27' />
+#### 2.4.4.3. Source Update <div id='27' />
+
+> RabbitMQ 연결 URL설정이 필요하다.
+> node.controller.js 파일 97번줄을 다음과 같이 수정한다.
+> http://xxx.xxx.xxx.xxx:xxxxx 에 RebbitMQ 접속URL 로 변경한다.
+
+    vm.messageQueueHost = 'http://xxx.xxx.xxx.xxx:xxxxx';
+
+##### 2.4.4.3. Building 및 Web Server 기동 <div id='28' />
 
 > **Building**
 
@@ -545,7 +554,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 <br /><br />
 
 
-#    3. IaaS 모니터링 애플리케이션 구성 <div id='28' />
+#    3. IaaS 모니터링 애플리케이션 구성 <div id='29' />
 
 > IaaS 모니터링 Application은 Openstack, Monasca 기반으로 구성되어 있다. Openstack Node에 monasca Agent가 설치되어 metric data를 monasca에 전송해준다. IaaS 모니터링은 Openstack, Monasca와 연동하여 Application을 기동한다. 사용자 계정은 Openstack 관리자 권한 사용자만 IaaS Monitoring에 로그인 가능하다.
 
@@ -553,7 +562,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-##  3.1. 관련 Table 목록  <div id='29' />
+##  3.1. 관련 Table 목록  <div id='30' />
 
 > IaaS 모니터링은 기본적으로 Monasca의 DB정보를 사용한다. 이외에 Openstack에 필요
 
@@ -626,7 +635,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-##  3.2. IaaS Monitoring 구조  <div id='30' />
+##  3.2. IaaS Monitoring 구조  <div id='31' />
 
 > 다음 그림은 IaaS 모니터링의 좀더 상세한 구조를 보여준다.  IaaS Monitoring은 Openstack, metricDB, configDB와 연계하여 시스템의 상태 및 알람설정 및 처리 이력등을 보여준다.
 
@@ -634,7 +643,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-##  3.3. IaaS Monitoring Component  <div id='31' />
+##  3.3. IaaS Monitoring Component  <div id='32' />
 
 <table>
     <tr>
@@ -669,7 +678,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-##  3.4. IaaS Monitoring 설정정보  <div id='32' />
+##  3.4. IaaS Monitoring 설정정보  <div id='33' />
 
 > Monitoring-Batch는 Config.ini에 관련 속성정보를 정의 한다.
 
@@ -738,13 +747,13 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-##  3.5. IaaS Monitoring Package 구조  <div id='33' />
+##  3.5. IaaS Monitoring Package 구조  <div id='34' />
 
 ![intellj_install_1](images/3.5.png)
 
 <br />
 
-##  3.6. IaaS Monitoring Package 간 호출 구조  <div id='34' />
+##  3.6. IaaS Monitoring Package 간 호출 구조  <div id='35' />
 
 > Batch는 30초 단위로 주기적으로 서비스를 호출한다.
 
@@ -752,11 +761,11 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-##   3.7. IaaS Monitoring 화면 <div id='35' />
+##   3.7. IaaS Monitoring 화면 <div id='36' />
 
 <br />
 
-###  3.7.1. Login 화면 <div id='36' />
+###  3.7.1. Login 화면 <div id='37' />
 
 > 로그인 화면으로 Openstack Admin 권한을 가진 사용자의 Id/Pwd를 사용하여 Login 한다.(Openstack 인증)
 
@@ -764,7 +773,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br /><br />
 
-###  3.7.2. Main 화면 <div id='37' />
+###  3.7.2. Main 화면 <div id='38' />
 
 > Main화면에는 Hypervisor 정보와 manage/compute node, Tenant 요약 정보 및 시스템 자원 사용량 정보를 보여준다.
  
@@ -772,7 +781,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-###  3.7.3. Manage Node Summary 화면 <div id='38' />
+###  3.7.3. Manage Node Summary 화면 <div id='39' />
 
 > Manage Node에는 Controller/Block/Network Node등이 있다. Manage Node를 선택하면 Node별 Top Process를 볼 수 있다. Controller Node인경우 RabbitMq상태도 조회 가능하다.
 
@@ -780,7 +789,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-###  3.7.4	Manage Node 상세 화면 <div id='39' />
+###  3.7.4	Manage Node 상세 화면 <div id='40' />
 
 > 노드를 클릭하면 상세정보로 이동한다. 상세정보에는 cpu,memory,disk,network정보등을 조회 할 수 있다. 
  
@@ -794,7 +803,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-###  3.7.5	Compute Node Summary <div id='40' />
+###  3.7.5	Compute Node Summary <div id='41' />
 
 > Compute Node를 선택하면 Node별 Top Process를 볼 수 있다. Compute Node의 요약정보 및 시스템 자원 상태도 확인 가능하다.
 
@@ -802,7 +811,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
  
 <br />
 
-###  3.7.6	Tenant Summary <div id='41' />
+###  3.7.6	Tenant Summary <div id='42' />
 
 > 상단 Tenant를 클릭하면 Tenant 요약정보 목록이 나타난다. Tenant목록에는 로그인한 사용자가 권한을 가지고 있는 Tenant만 조회된다. 화면 하단 더보기 버튼을 클릭하면 VM 정보가 추가된다.
  
@@ -810,7 +819,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-###  3.7.7	VM 상세 화면 <div id='42' />
+###  3.7.7	VM 상세 화면 <div id='43' />
 
 > Instance를 클릭하면 상세 화면으로 이동한다.
 
@@ -818,7 +827,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-###  3.7.8	Alarm Notification <div id='43' />
+###  3.7.8	Alarm Notification <div id='44' />
 
 > 화면 상단 Alarm> Alarm Notification을 클릭하면 화면 하단의 화면이 나타난다.
 > Alarm Notification은 Alarm이 발생했을 때 Alarm을 전송받을 Email주소를 입력한다.
@@ -827,7 +836,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
  
 <br />
 
-###  3.7.9	Alarm Definition <div id='44' />
+###  3.7.9	Alarm Definition <div id='45' />
 
 > 화면 상단 Alarm> Alarm Definition 을 클릭하면 화면 하단의 화면이 나타난다.
 
@@ -837,7 +846,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-###  3.7.10 Alarm Definition 생성 <div id='45' />
+###  3.7.10 Alarm Definition 생성 <div id='46' />
 
 > Alarm명 및 심각도 , Alarm설정할 기준을 Expression에서 등록한다. Alarm Receiver에 +버튼을 클릭하여 Notification에 등록한 Alarm 수신자를 설정한다.
  
@@ -845,7 +854,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-###  3.7.11 Alarm Status조회 <div id='46' />
+###  3.7.11 Alarm Status조회 <div id='47' />
 
 > 화면 상단 Alarm> Alarm Status을 클릭하면 화면 하단의 화면이 나타난다.
 
