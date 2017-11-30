@@ -4,8 +4,8 @@
 src/openstack-monitoring-portal/bin
 src/openstack-monitoring-portal/pkg
 src/openstack-monitoring-portal/src/code.cloudfoundry.org
-#src/openstack-monitoring-portal/src/kr/paasta/monitoring/openstack/Godeps/
-#src/openstack-monitoring-portal/src/kr/paasta/monitoring/openstack/vendor/
-#src/openstack-monitoring-portal/src/github.com
-#src/openstack-monitoring-portal/src/golang.org/
-#src/openstack-monitoring-portal/src/gopkg.in
+src/openstack-monitoring-portal/src/kr/paasta/monitoring/openstack/Godeps/
+src/openstack-monitoring-portal/src/kr/paasta/monitoring/openstack/vendor/
+src/openstack-monitoring-portal/src/github.com
+src/openstack-monitoring-portal/src/golang.org/
+src/openstack-monitoring-portal/src/gopkg.in
