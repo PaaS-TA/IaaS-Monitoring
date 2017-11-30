@@ -1,0 +1,33 @@
+<div class="loading-container" ng-show="loading"><div class='loading loading--audioWave'></div></div>
+<div class="login-wrap">
+    <content class="login-content">
+        <section class="login">
+            <div id="myModal" class="login-modal">
+                <!-- Modal content -->
+                <div class="login-modal-content">
+                    <div class="login-modal-header">
+                        <h2><img src="assets/images/logo.png"></h2>
+                    </div>
+                    <div class="login-modal-body">
+                        <h3>Welcome</h3>
+                        <form>
+                            <ul class="user_info">
+                                <li>
+                                    <input type="text" name="name" placeholder="이메일을 입력하세요." ng-model="login.email">
+                                </li>
+                                <li class="input-add">
+                                    <input type="Password" name="Password" placeholder="비밀번호를 입력하세요." ng-model="login.password">
+                                </li>
+                            </ul>
+                            <ul class="send">
+                                <li>
+                                    <input type="submit" name="login" value="로그인" ng-click="login.login()">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </content>
+</div>
