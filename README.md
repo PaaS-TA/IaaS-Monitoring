@@ -743,7 +743,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
     elastic.url=xxx.xxx.xxx.xxx:xxxx
     
     #Time difference(hour)
-    gmt.time.gap=9
+    gmt.time.gap=0          ⇒ Gmt 시간과 차이 표시, 실행환경의 시간이 Gmt 기준시 일때는 0 으로 해야함. 실행환경 시간이 한국일떄 -9 (Gmt Time Gap)  PaaS-TA는 GMT Time을 사용한다.
 
 <br />
 
