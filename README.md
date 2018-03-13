@@ -217,7 +217,7 @@ idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
-&nbsp;&nbsp;&nbsp; ![intellj_install_1](images/2.2.4_2.png)
+&nbsp;&nbsp;&nbsp; ![intellj_install_1](images/2.2.4_1.png)
 
 - 화면상단 메뉴에서 File > Setting 을 클릭한다.
 
