@@ -164,17 +164,16 @@ IaaS-Monitoring-v1.0
 
 > **IDEA 다운로드**
 
-    https://www.jetbrains.com/idea/?fromMenu
+    https://www.jetbrains.com/idea/download/previous.html
 
-&nbsp;&nbsp;&nbsp; ![intellj_install_1](images/2.2.2_1.png)
-&nbsp;&nbsp;&nbsp; ![intellj_install_2](images/2.2.2_2.png)
-&nbsp;&nbsp;&nbsp; ![intellj_install_3](images/2.2.2_3.png)
+&nbsp;&nbsp;&nbsp; ![intellj_install_1](images/2.2.2_1_1.png)
+&nbsp;&nbsp;&nbsp; ![intellj_install_2](images/2.2.2_2_1.png)
 
 <br />
 
 > **IntelliJ IDEA 설치**
 
-idealC-2017.2.5.exe 더블클릭하여 설치를 실행한다.
+ideaIC-2017.1.6.exe 더블클릭하여 설치를 실행한다.
 
 <br />
 
