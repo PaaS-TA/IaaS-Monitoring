@@ -162,7 +162,7 @@ IaaS-Monitoring-v1.0
 
 ###  2.2.3.	IntelliJ IDEA설치 <div id='11' />
 
-> **IDEA 다운로드**
+> **IDEA 다운로드** (Version 2017.1 이후 부터 GoLang Plugin이 지원되지 않습니다.)
 
     https://www.jetbrains.com/idea/download/previous.html
 
