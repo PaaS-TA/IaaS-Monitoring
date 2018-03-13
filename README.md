@@ -323,8 +323,8 @@ ideaIC-2017.1.6.exe 더블클릭하여 설치를 실행한다.
     go get github.com/alexedwards/scs
     go get gopkg.in/olivere/elastic.v3
     go get github.com/onsi/ginkgo
-    github.com/onsi/gomega
-    github.com/stretchr/testify
+    go get github.com/onsi/gomega
+    go get github.com/stretchr/testify
 
 <br />
 
