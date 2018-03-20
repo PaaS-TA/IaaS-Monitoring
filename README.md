@@ -303,6 +303,11 @@ ideaIC-2017.1.6.exe 더블클릭하여 설치를 실행한다.
 
 > Dos 창을 오픈한다.
 
+    [OS : Ubuntu]
+    export GOPATH=$PWD
+    export PATH=$GOPATH/bin:$PATH
+
+    [OS : Windows]
     $ cd \IaaS-Monitoring\src\openstack-monitoring-portal
     $ set GOPATH='현재 디렉토리 경로"
     $ set PATH=%PATH%;%GOPATH%bin;
@@ -336,9 +341,13 @@ ideaIC-2017.1.6.exe 더블클릭하여 설치를 실행한다.
 
 > Dependency를 모두 다운 받은 후 다음을 실행한다.
 
-    $cp ./lib-bugFix-src/alarm_definitions.go ./src/github.com/monasca/golang-monascaclient/ monascaclient
-    $cp ./lib-bugFix-src/notifications.go ./src/github.com/monasca/golang-monascaclient/ monascaclient
-    $cp ./lib-bugFix-src/alarms.go ./src/github.com/monasca/golang-monascaclient/monascaclient
+    [OS : Ubuntu]
+    cp ./lib-bugFix-src/alarm_definitions.go ./src/github.com/monasca/golang-monascaclient/ monascaclient
+    cp ./lib-bugFix-src/notifications.go ./src/github.com/monasca/golang-monascaclient/ monascaclient
+    cp ./lib-bugFix-src/alarms.go ./src/github.com/monasca/golang-monascaclient/monascaclient
+    
+    [OS : Windows]
+    위 내용을 각각 실행
 
 <br />
 
