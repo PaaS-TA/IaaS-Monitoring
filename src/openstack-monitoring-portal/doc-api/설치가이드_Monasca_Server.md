@@ -157,9 +157,8 @@
 7. Monasca Server 관련 데이터베이스 다운로드 및 등록
 
     $ sudo apt-get install unzip
-    $ wget --no-check-certificate https://www.shaunos.com/wp-content/uploads/2016/09/mon_mysql.zip
+    $ git clone https://github.com/PaaS-TA/IaaS-Monitoring/tree/master/src/openstack-monitoring-portal/doc-api/zip/mon_mysql.zip
     $ unzip mon_mysql.zip
-
 
 > mon_mysql.sql 파일의 monasca 사용자의 패스워드를 변경한다.
 > Line 234,235
