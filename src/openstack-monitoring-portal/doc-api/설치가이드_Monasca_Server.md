@@ -123,49 +123,53 @@
 
 #  3. MariaDB 설치 및 데이터베이스 설정  <div id='7' />
 
-1.MariaDB public key 가져오기
+### 1. MariaDB public key 가져오기
 
     $ sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
 
-2.MariaDB repository 정보 등록
+### 2. MariaDB repository 정보 등록
 
     $ sudo vi /etc/apt/sources.list.d/mariadb.list
     
     deb [arch=amd64,i386] http://mirror.jmu.edu/pub/mariadb/repo/10.2/ubuntu trusty main
     deb-src http://mirror.jmu.edu/pub/mariadb/repo/10.2/ubuntu trusty main
 
-3.MariaDB 설치
+### 3. MariaDB 설치
 
     $ sudo apt-get update
     $ sudo apt-get install mariadb-server
  
-4.MariaDB root 계정의 패스워드 입력
+### 4. MariaDB root 계정의 패스워드 입력
 
 ![intellj_install_1](img/4-4.png)
 
-5.MariaDB root 계정의 패스워드 확인
+### 5. MariaDB root 계정의 패스워드 확인
 
 ![intellj_install_1](img/4-5.png)
 
-6.MariaDB 설치 완료 확인
+### 6. MariaDB 설치 완료 확인
 
 ![intellj_install_1](img/4-6.png)
 
     $ mysql –u root –p”패스워드” 
 
 
-7. Monasca Server 관련 데이터베이스 다운로드 및 등록
+### 7. Monasca Server 관련 데이터베이스 다운로드 및 등록
+
+#### 7-1. 다운로드
+
+https://github.com/PaaS-TA/IaaS-Monitoring/raw/master/src/openstack-monitoring-portal/doc-api/zip/mon_mysql.zip
+
+> 위 주소에 있는 파일은 다운로드 한다.
 
     $ sudo apt-get install unzip
-    $ git clone https://github.com/PaaS-TA/IaaS-Monitoring/tree/master/src/openstack-monitoring-portal/doc-api/zip/mon_mysql.zip
     $ unzip mon_mysql.zip
 
-> mon_mysql.sql 파일의 monasca 사용자의 패스워드를 변경한다.
-> Line 234,235
+#### 7-2. 등록
 
     $ mysql –u root –p”패스워드” < mon_mysql.sql
 
-8. Monasa Database 확인
+### 8. Monasa Database 확인
 
     $ mysql –u root –p”패스워드”
 
